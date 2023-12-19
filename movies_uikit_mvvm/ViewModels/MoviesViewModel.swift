@@ -6,7 +6,6 @@ protocol MoviesViewModel {
     var showLoader: (() -> ())? { get set }
     var showError: (() -> ())? { get set }
     var showMovies: ((Movies) -> ())? { get set }
-    var updateImage: ((UIImage?) -> ())? { get set }
 }
 
 class MoviesViewModelImpl: MoviesViewModel{
@@ -14,7 +13,6 @@ class MoviesViewModelImpl: MoviesViewModel{
     var showLoader: (() -> ())?
     var showError: (() -> ())?
     var showMovies: ((Movies) -> ())?
-    var updateImage: ((UIImage?) -> ())?
 
     required init(apiProvider: ApiProvider) {
         self.apiProvider = apiProvider
